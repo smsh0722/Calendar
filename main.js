@@ -26,13 +26,28 @@ const displayCal = function () {
   const lastIdx = lastDates.length - 1;
   const nextIdx = dates.length - nextDates.length;
 
-  dates.forEach((date, i) => {
-    if (i <= lastIdx || i >= nextIdx)
-      dates[
-        i
-      ] = `<div class = "date" ><span style = "opacity: .3" >${date}</span></div>`;
-    else dates[i] = `<div class = "date">${date}</div>`;
-  });
+  const today = new Date();
+  if (year === today.getFullYear() && month === today.getMonth()) {
+    dates.forEach((date, i) => {
+      if (i <= lastIdx || i >= nextIdx)
+        dates[
+          i
+        ] = `<div class = "date" ><span style = "opacity: .3" >${date}</span></div>`;
+      else if (dates[i] === today.getDate())
+        dates[
+          i
+        ] = `<div class = "date border border-primary rounded">${date}</div>`;
+      else dates[i] = `<div class = "date">${date}</div>`;
+    });
+  } else {
+    dates.forEach((date, i) => {
+      if (i <= lastIdx || i >= nextIdx)
+        dates[
+          i
+        ] = `<div class = "date" ><span style = "opacity: .3" >${date}</span></div>`;
+      else dates[i] = `<div class = "date">${date}</div>`;
+    });
+  }
   document.querySelector(".dates").innerHTML = dates.join("");
 };
 
