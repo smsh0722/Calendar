@@ -17,6 +17,8 @@ body {
 }
 
 .YM {
+  position: absolute;
+  left: 46%;
   font-size: 30px;
   color: royalblue;
 }
