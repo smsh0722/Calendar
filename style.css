@@ -5,11 +5,15 @@ body {
   min-height: 100vh;
 }
 
-.calendar {
+.calendar-m {
   width: 600px;
   margin: 50px;
 }
-
+.calendar-w {
+  width: 600px;
+  height: 500px;
+  margin: 50px;
+}
 .head {
   display: flex;
   justify-content: space-between;
