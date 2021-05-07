@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-    <title>Calendar</title>
+  <headh>
+    <title>Calendar: Week</title>
     <link rel="stylesheet" href="style.css" />
     <!-- bootstrap -->
     <link
@@ -15,9 +14,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
     />
-  </head>
+  </headh>
   <body>
-    <div class="calendar">
+    <div class="calendar-w">
       <div class="head">
         <div class="d-grid gap-2 d-md-block">
           <button
@@ -42,29 +41,8 @@
             <i class="bi bi-calendar3-event"></i> D
           </button>
         </div>
-        <div class="YM"></div>
-        <div>
-          <button onclick="lastMonth()">
-            <i class="bi bi-caret-up"></i>
-          </button>
-          <button onclick="nextMonth()">
-            <i class="bi bi-caret-down"></i>
-          </button>
-        </div>
       </div>
-      <div class="main">
-        <div class="days">
-          <p class="day text-danger">Su</p>
-          <p class="day">Mo</p>
-          <p class="day">Tu</p>
-          <p class="day">We</p>
-          <p class="day">Th</p>
-          <p class="day">Fr</p>
-          <p class="day text-primary">Sa</p>
-        </div>
-        <div class="dates"></div>
-      </div>
+      <div class="main"></div>
     </div>
-    <script src="main.js"></script>
   </body>
 </html>
