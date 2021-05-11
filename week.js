@@ -1,5 +1,17 @@
 let d = new Date();
 
+const displayTable = function () {
+  let times = [];
+  for (let i = 0; i < 24; i++) {
+    times.push(
+      `<tr><th scope = "row" style = "width: 100px; height: 50px">${i}:00</th>`
+    );
+    for (let j = 0; j < 7; j++) times.push(`<td></td>`);
+    times.push(`</tr>`);
+  }
+  document.querySelector("#times").innerHTML = times.join("");
+};
+
 const displayWeek = function () {
   const year = d.getFullYear();
   const month = d.getMonth(); // 0~11
@@ -58,6 +70,8 @@ const displayWeek = function () {
   }
 
   document.querySelector(".dates").innerHTML = dates.join("");
+
+  displayTable();
 };
 
 displayWeek();
@@ -72,5 +86,3 @@ const nextWeek = function () {
   d.setDate(d.getDate() - d.getDay());
   displayWeek();
 };
-
-const displayTable = function () {};
