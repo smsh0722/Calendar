@@ -1,5 +1,3 @@
-console.log('zzzz');
-
 const $button = document.querySelector('.hi');
 
 var $modalButton = document.getElementById('btn-modal');
@@ -26,7 +24,6 @@ function hideModal() {
 $modalButton.addEventListener('click', function () {
   if (!modalShow) {
     showModal();
-    console.log('clicked!', window.inputValue);
   } else {
     hideModal();
   }
@@ -45,32 +42,62 @@ $closeButton.addEventListener('click', function () {
 
   hideModal();
 });
-var inputTask, inputMonth, inputDate, startTime, endTime;
+
+let tasks = [],
+  inputMonth = [],
+  inputDate = [],
+  startTime = [],
+  endTime = [];
+
+function saveTasks() {
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+function saveMonth() {
+  localStorage.setItem('inputMonth', JSON.stringify(inputMonth));
+}
+
+function saveDate() {
+  localStorage.setItem('inputDate', JSON.stringify(inputDate));
+}
+
+function saveStartTime() {
+  localStorage.setItem('startTime', JSON.stringify(startTime));
+}
+
+function saveEndTime() {
+  localStorage.setItem('endTime', JSON.stringify(endTime));
+}
 
 $addButton.addEventListener('click', function () {
   const element = document.querySelector('#task-input');
 
-  inputTask = element.value;
+  tasks.push(task);
+  saveTasks();
   element.value = '';
 
   const mon = document.querySelector('#month-input');
 
-  inputMonth = mon.value;
+  inputMonth.push(month);
+  saveMonth();
   mon.value = '';
 
   const day1 = document.querySelector('#day-input');
 
-  inputDate = day1.value;
+  inputDate.push(date);
+  saveDate();
   day1.value = '';
 
   const st = document.querySelector('#start-time-input');
 
-  startTime = st.value;
+  startTime.push(startTime1);
+  saveStartTime();
   st.value = '';
 
   const et = document.querySelector('#end-time-input');
 
-  endTime = et.value;
+  endTime.push(endTime1);
+  saveEndTime();
   et.value = '';
 
   hideModal();
