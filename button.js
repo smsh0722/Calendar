@@ -51,8 +51,16 @@ function saveTodos() {
 
 $addButton.addEventListener('click', function () {
   const element = document.querySelector('#task-input');
+  const mon = document.querySelector('#month-input');
+  const date = document.querySelector('#day-input');
+  const st = document.querySelector('#start-time-input');
+  const et = document.querySelector('#end-time-input');
 
-  let inputTask = element.value;
+  let inputTask = element.value,
+    inputMonth = mon.value,
+    inputDate = date.value,
+    startTime = st.value,
+    endTime = et.value;
 
   let todo = {
     task: inputTask,
@@ -66,17 +74,9 @@ $addButton.addEventListener('click', function () {
   saveTodos();
 
   element.value = '';
-
-  const mon = document.querySelector('#month-input');
   mon.value = '';
-
-  const day1 = document.querySelector('#day-input');
   day1.value = '';
-
-  const st = document.querySelector('#start-time-input');
   st.value = '';
-
-  const et = document.querySelector('#end-time-input');
   et.value = '';
 
   hideModal();
