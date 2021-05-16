@@ -43,61 +43,40 @@ $closeButton.addEventListener('click', function () {
   hideModal();
 });
 
-let tasks = [],
-  inputMonth = [],
-  inputDate = [],
-  startTime = [],
-  endTime = [];
+let todos = [];
 
-function saveTasks() {
-  localStorage.setItem('tasks', JSON.stringify(tasks));
-}
-
-function saveMonth() {
-  localStorage.setItem('inputMonth', JSON.stringify(inputMonth));
-}
-
-function saveDate() {
-  localStorage.setItem('inputDate', JSON.stringify(inputDate));
-}
-
-function saveStartTime() {
-  localStorage.setItem('startTime', JSON.stringify(startTime));
-}
-
-function saveEndTime() {
-  localStorage.setItem('endTime', JSON.stringify(endTime));
+function saveTodos() {
+  localStorage.setItem('todos', JSON.stringify(todos));
 }
 
 $addButton.addEventListener('click', function () {
   const element = document.querySelector('#task-input');
 
-  tasks.push(task);
-  saveTasks();
+  let inputTask = element.value;
+
+  let todo = {
+    task: inputTask,
+    month: inputMonth,
+    date: inputDate,
+    ST: startTime,
+    ET: endTime,
+  };
+
+  todos.push(todo);
+  saveTodos();
+
   element.value = '';
 
   const mon = document.querySelector('#month-input');
-
-  inputMonth.push(month);
-  saveMonth();
   mon.value = '';
 
   const day1 = document.querySelector('#day-input');
-
-  inputDate.push(date);
-  saveDate();
   day1.value = '';
 
   const st = document.querySelector('#start-time-input');
-
-  startTime.push(startTime1);
-  saveStartTime();
   st.value = '';
 
   const et = document.querySelector('#end-time-input');
-
-  endTime.push(endTime1);
-  saveEndTime();
   et.value = '';
 
   hideModal();
