@@ -24,4 +24,4 @@ Calendar desktop app implemented with *HTML*, *CSS*, *JS* and *Electron*.
 ## Code of Conduct
 
 ## License
-- License under [MIT] License
+- License under [MIT](https://github.com/smsh0722/Calendar/blob/develop/LICENSE) License
