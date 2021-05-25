@@ -9,7 +9,8 @@ Calendar desktop app implemented with *HTML*, *CSS*, *JS* and *Electron*.
 - With the button on the top left, select the calendar from monthly, weekly, or daily.
 - Through the up and down buttons, you can flip the calendar
 - Today is expressed on the calendar.
-- Todo list can be added
+- Todo list can be added by add button
+- Todo list can be removed by red button
 
 ## Installation
 - Download Cal_(version).zip from main
