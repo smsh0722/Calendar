@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-��# Calendar
-=======
 # Calendar
 Calendar desktop app implemented with *HTML*, *CSS*, *JS* and *Electron*.
 
@@ -29,4 +26,3 @@ Calendar desktop app implemented with *HTML*, *CSS*, *JS* and *Electron*.
 
 ## License
 - License under [MIT](https://github.com/smsh0722/Calendar/blob/develop/LICENSE) License
->>>>>>> 7055388050a91eecbc4babc9b9a2a89766037b3b
