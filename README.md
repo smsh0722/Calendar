@@ -14,7 +14,7 @@ Calendar desktop app implemented with *HTML*, *CSS*, *JS* and *Electron*.
 - Todo list can be removed by red button
 
 ## Installation
-- Download Cal_(version).zip from main
+- use electron from main
 
 ## Releases
 - version 1.0.0
